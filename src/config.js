@@ -1,5 +1,5 @@
 const serverVars = {   
-    apiUrl: 'https://italy28.117.bet',
+    apiUrl: 'https://games.117.bet',
   };
 
   
