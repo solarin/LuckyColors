@@ -1,0 +1,26 @@
+.BalanceBar .NumberRowBB div{
+    padding: 0px !important;
+}
+
+.BalanceBar
+{
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.BalanceBar .card-body{
+    padding-top: 2px;
+    padding-bottom: 0px;
+}
+
+.BalanceBar .divIcon
+{
+    font-size: 25px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+.bg-darkGreen{
+    background-color:#107126 !important;
+}

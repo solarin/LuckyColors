@@ -1,0 +1,11 @@
+.StatusBarTitle{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.divMain .badge{
+    font-size: 15px;
+} 
+.bg-darkGreen{
+    background-color:#107126 !important;
+}

@@ -1,0 +1,16 @@
+.card-historySummary .btnViewHistory {
+  float: right;
+}
+
+.card-historySummary .card-title {
+  padding: 5px 10px 5px 10px;
+  border-bottom: #888787 1px solid;
+}
+
+.card-historySummary .card-body {
+  padding-top: 5px;
+}
+
+.font-bold {
+  font-weight: bold;
+}

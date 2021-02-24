@@ -1,0 +1,90 @@
+.Allowedbets .NumbersAB {
+  background-color: black !important;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  margin: auto;
+  color: white;
+  padding-top: 8px;
+}
+.numbers0{
+  background-color: white !important;
+  border:4px solid #d39e00;
+  border-radius: 50%;
+  height: 45px;
+ width: fit-content;
+    min-width: 45px;
+  margin: auto;
+  color: #d39e00;
+  padding-top: 6px;
+font-weight: 500;
+}
+.numbers1{
+  background-color: white !important;
+  border:4px solid #0a521b;
+
+  border-radius: 50%;
+  height: 45px;
+ width: fit-content;
+    min-width: 45px;
+  margin: auto;
+  color: #0a521b;
+  padding-top: 6px;
+font-weight: 500;
+}
+.numbers2{
+  background-color: white !important;
+  border:4px solid blue;
+
+  border-radius: 50%;
+  height: 45px;
+  width: fit-content;
+    min-width: 45px;
+  margin: auto;
+  color: blue;
+  padding-top: 6px;
+font-weight: 500;
+}
+.numbers3{
+  background-color: white !important;
+  border:4px solid #e01ed1;
+
+  border-radius: 50%;
+  height: 45px;
+  width: fit-content;
+    min-width: 45px;
+  margin: auto;
+  color: #e01ed1;
+  padding-top: 6px;
+font-weight: 500;
+}
+.numbers4{
+  background-color: white !important;
+  border:4px solid red;
+
+  border-radius: 50%;
+  height: 45px;
+ width: fit-content;
+    min-width: 45px;
+  margin: auto;
+  color: red;
+  padding-top: 6px;
+font-weight: 500;
+}
+
+
+.Allowedbets .card-body {
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
+
+.Allowedbets {
+  bottom: 75px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.bg-custom{
+  background-color: #009900;
+}
+
