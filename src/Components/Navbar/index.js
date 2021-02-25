@@ -93,9 +93,7 @@ class NavigationBar extends Component {
             <img src={this.props.logoUrl} style={{ width: "50px" }} />
           </Navbar.Brand>
           <Navbar.Brand>{this.props.title}</Navbar.Brand>
-          <Navbar.Brand>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </Navbar.Brand>
+          <div style={{textAlign: 'right',width: '100%'}}>
           <Navbar.Brand>
             <Countdown
               key={this.props.timerDuration}
@@ -112,6 +110,9 @@ class NavigationBar extends Component {
           <Navbar.Brand href={this.props.EXIT_URL}>
             <FontAwesomeIcon icon={faTimes} />
           </Navbar.Brand>
+          </div>
+          
+          
         </Navbar>
 
         {/* <Row className="row bg-warning text-center">
