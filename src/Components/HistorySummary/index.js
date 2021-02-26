@@ -134,7 +134,7 @@ class HistorySummary extends Component {
           className="text-center"
           style={{
             minHeight: "175px",
-            maxHeight: window.innerHeight - 470 + "px",
+            maxHeight: window.innerHeight - 449 + "px",
             overflowX: "auto",
           }}
         >
