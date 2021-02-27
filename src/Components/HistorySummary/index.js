@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Row, Col, Card,Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faListAlt } from "@fortawesome/free-solid-svg-icons";
+import { faListAlt,faInfo } from "@fortawesome/free-solid-svg-icons";
 import "./History.css";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { format } from "react-string-format";
 import Modal from 'react-modal';
 import History from '../History';
+import GameInfo from '../GameInfo';
+
 
 const customStyles = {
   content: {
@@ -22,22 +21,25 @@ const customStyles = {
 
 class HistorySummary extends Component {
   state = {
-    modalIsOpen: false
+    historyModalIsOpen: false,
+    gameInfoModalIsOpen: false
   };
 
   componentDidMount() {
    
   }
-  openModal = () => {
-    this.setState({ modalIsOpen: true });
+  historyOpenModal = () => {
+    this.setState({ historyModalIsOpen: true });
+  }
+  gameInfoOpenModal = () => {
+    this.setState({ gameInfoModalIsOpen: true });
   }
 
-  afterOpenModal = () => {
-
+  historyCloseModal = () => {
+    this.setState({ historyModalIsOpen: false });
   }
-
-  closeModal = () => {
-    this.setState({ modalIsOpen: false });
+  gameInfoCloseModal = () => {
+    this.setState({ gameInfoModalIsOpen: false });
   }
 
 
@@ -82,15 +84,17 @@ class HistorySummary extends Component {
   render() {
     return (
       <Card className="card-historySummary">
-        <Card.Title className="bg-warning" style={{ marginBottom: "5px" }}>
+         <Card.Title className="bg-warning" style={{ marginBottom: "5px" }}>
           {this.props.historyText}
+          <span style={{marginLeft:'65%'}}>
+            <FontAwesomeIcon icon={faInfo} onClick={this.gameInfoOpenModal} />
+          </span>
           <span className="btnViewHistory">
-            <FontAwesomeIcon icon={faListAlt} onClick={this.openModal} />
+            <FontAwesomeIcon icon={faListAlt} onClick={this.historyOpenModal} />
           </span>
           <Modal
-            isOpen={this.state.modalIsOpen}
-            onAfterOpen={this.afterOpenModal}
-            onRequestClose={this.closeModal}
+            isOpen={this.state.historyModalIsOpen}
+            onRequestClose={this.historyCloseModal}
             contentLabel="Example Modal"
             ariaHideApp={false}
             style={customStyles}
@@ -126,7 +130,20 @@ class HistorySummary extends Component {
                 LOST_STATUS: this.props.LOST_STATUS,
                 setBETBalance:this.props.setBETBalance
               }}
-              closeModal={this.closeModal}
+              historyCloseModal={this.historyCloseModal}
+            />
+          </Modal>
+          <Modal
+            isOpen={this.state.gameInfoModalIsOpen}
+            onRequestClose={this.gameInfoCloseModal}
+            contentLabel="Example Modal"
+            ariaHideApp={false}
+            style={customStyles}
+          >
+            <GameInfo
+              gameInfoCloseModal={this.gameInfoCloseModal}
+              GAME_INFO_TITLE={this.props.GAME_INFO_TITLE}
+              GAME_INFO={this.props.GAME_INFO}
             />
           </Modal>
         </Card.Title>

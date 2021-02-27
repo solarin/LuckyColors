@@ -1,0 +1,42 @@
+.card-historySummary .btnViewHistory {
+  float: right;
+}
+
+.card-historySummary .card-title {
+  padding: 5px 10px 5px 10px;
+  border-bottom: #888787 1px solid;
+}
+
+.card-historySummary .card-body {
+  padding-top: 5px;
+}
+
+.backIcon {
+  color: black;
+  float:right
+}
+
+.gridIcon {
+  color: black;
+  font-size: 14px;
+}
+
+.hide-Content {
+  display: none;
+}
+
+.show-Content {
+  display: inline;
+}
+th {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+td {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+table tr {
+  border-bottom: 2px solid #ccc;
+}

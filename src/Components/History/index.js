@@ -130,7 +130,7 @@ class History extends Component {
     return array.join("-");
   };
   closeModal=()=>{
-    this.props.closeModal();
+    this.props.historyCloseModal();
   }
 
 

@@ -49,6 +49,8 @@ class Home extends Component {
             SMALL_SYMBOL: "",
             ODD_SYMBOL: "",
             EVEN_SYMBOL: "",
+            GAME_INFO_TITLE: "",
+            GAME_INFO: "",
             SUM_IS: "",
             NTH_NUMBER_IS: "",
             ID: "",
@@ -162,6 +164,8 @@ class Home extends Component {
                 this.GetUITextByKey("VIOLET_SYMBOL");
                 this.GetUITextByKey("GREEN_SYMBOL");
                 this.GetUITextByKey("RED_SYMBOL");
+                this.GetUITextByKey("GameInfoTitle");
+                this.GetUITextByKey("GameInfo");
                 this.GetUITextByKey("FIRST");
                 this.GetUITextByKey("SECOND");
                 this.GetUITextByKey("THIRD");
@@ -305,6 +309,16 @@ class Home extends Component {
                         case "RED_SYMBOL":
                             this.setState({
                                 RED_SYMBOL: item.value,
+                            });
+                            break;
+                        case "GameInfoTitle":
+                            this.setState({
+                                GAME_INFO_TITLE: item.value,
+                            });
+                            break;
+                        case "GameInfo":
+                            this.setState({
+                                GAME_INFO: item.value,
                             });
                             break;
                         case "FIRST":
@@ -542,7 +556,7 @@ class Home extends Component {
             this.state.eventDescArray.forEach(item => {
                 if (item.name === this.state.eventName) {
                     this.setState({ maxBet: parseFloat((Number(item.payoutMul) * newAmount).toFixed(2)) });
-                } 
+                }
             })
         }
 
@@ -718,8 +732,6 @@ class Home extends Component {
     };
 
     render() {
-        console.log('this.state.eventName');
-        console.log(this.state.eventName);
         return [<
             NavigationBar
             logoUrl={this.state.logoUrl}
@@ -767,10 +779,13 @@ class Home extends Component {
             HISTORY={this.state.HISTORY}
             BET_CANT_CANCEL={this.state.BET_CANT_CANCEL}
             BET_CANCELED={this.state.BET_CANCELED}
-            
+
             RED_SYMBOL={this.state.RED_SYMBOL}
             GREEN_SYMBOL={this.state.GREEN_SYMBOL}
             VIOLET_SYMBOL={this.state.VIOLET_SYMBOL}
+
+            GAME_INFO_TITLE={this.state.GAME_INFO_TITLE}
+            GAME_INFO={this.state.GAME_INFO}
 
             EVENT={this.state.EVENT}
             RESULT={this.state.RESULT}
